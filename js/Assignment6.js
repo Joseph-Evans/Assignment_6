@@ -98,36 +98,39 @@ function OperationAddResult(result)
 
 function UpdateOrder()
 {
-    var objRequest = XMLHttpRequest();
+    var objRequest =  new XMLHttpRequest();
     var url = "http://bus-pluto.ad.uab.edu/jsonwebservice/service1.svc/updateOrderAddress";
     
     //Get variables
+
     if (document.getElementById("orderid").value !== "")
     {
         var orderid = document.getElementById("orderid").value;
     }
     else
     {
-        alert("Please input an order id.");
+        alert("Please input a valid order id.");
         return;
     }
+    
     if (document.getElementById("shipaddress").value !== "")
     {
-        var shippingaddress = document.getElementById("shipaddress").value;
+         var shippingaddress = document.getElementById("shipaddress").value;
     }
     else
     {
         var shippingaddress = "null";
     }
+    
     if (document.getElementById("shipcity").value !== "")
     {
-       var shippingcity = document.getElementById("shipcity").value; 
+        var shippingcity = document.getElementById("shipcity").value; 
     }
     else
     {
         var shippingcity = "null";
     }
-    
+   
     if (document.getElementById("shipname").value !== "")
     {
         var shippingname = document.getElementById("shipname").value;
@@ -139,12 +142,14 @@ function UpdateOrder()
     
     if (document.getElementById("shipcode").value !== "")
     {
-       var shippingcode = document.getElementById("shipcode").value; 
+         var shippingcode = document.getElementById("shipcode").value; 
     }
     else
     {
         var shippingcode = "null";
     }
+   
+    
     
     var updateorderid = '{"OrderID":"' + orderid + '","ShipName":"' + shippingname + '","ShipAddress":"' + shippingaddress + '","ShipCity":"' + shippingcity + '","ShipPostcode":"' + shippingcode + '"}';
     
@@ -171,7 +176,7 @@ function OperationUpdateOrder(result)
     }
     else
     {
-        document.getElementById("updateresults").innerHTML = "The operation was not successful" + "<br>" + "Either the order ID was not found or an unspecified error occured.";
+        document.getElementById("updateresults").innerHTML = "The operation was not successful." + "<br>" + "Either the order ID was not found or an unspecified error occured.";
     }
 }
 
