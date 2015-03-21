@@ -1,0 +1,51 @@
+#addcustomer
+{
+    visibility: hidden;
+    position: absolute;
+    overflow: scroll;
+    width: 600px;
+    background-color: #00CC00;
+}
+
+#changecustomer
+{
+    visibility: hidden;
+    position: absolute;
+    overflow: scroll;
+    width: 600px;
+    background-color: #00CC00;
+}
+
+#deletecustomer
+{
+    visibility: hidden;
+    position: absolute;
+    overflow: scroll;
+    width: 600px;
+    background-color: #00CC00;
+}
+
+#header
+{
+    width: 600px;
+    background-color: #003300;
+    color: white;
+}
+
+#addresults
+{
+    background-color: #0066FF;
+    color: white;
+}
+
+#deleteresults
+{
+    background-color: #0066FF;
+    color: white;
+}
+
+#updateresults
+{
+    background-color: #0066FF;
+    color: white;
+}
